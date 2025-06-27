@@ -41,14 +41,11 @@ export async function apiRequest(
   }
 
   try {
-    const response = await fetch(
-      `http://localhost:5000/api/${endpoint}`,
-      options
-    );
+    const response = await fetch(`/api/${endpoint}`, options);
 
     if (!response.ok) {
       const errorDetails = await response.json().catch(() => {
-        return { message: "Unknown error" }; 
+        return { message: "Unknown error" };
       });
       console.error(errorDetails);
       throw new Error(`Error ${response.status}: ${response.statusText}`);
