@@ -13,7 +13,7 @@ const app = express();
 
 const allowedOrigins = [
   "http://localhost:5173",
-  "https://wewrite-ed0g.onrender.com",
+  "https://we-write.onrender.com",
 ];
 
 app.use(
