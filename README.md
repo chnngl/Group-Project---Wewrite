@@ -1,4 +1,4 @@
-# 📖 We‑Write: Story Collab Tool (Group D)
+# 📖 We‑Write: Story Collab Tool
 
 A web application for seamless, real-time collaboration on stories, allowing authors to write, edit, and review each other’s work with robust locking, tagging, and history features.
 
