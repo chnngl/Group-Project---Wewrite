@@ -1,0 +1,15 @@
+.genre-container {
+    display: flex;  /* Enable flexbox */
+    gap: 5px;      /* Adds space between the genres */
+  }
+  
+  .genre-box {
+    /* border: 2px solid rgb(0, 0, 0); */
+    background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white */
+    border-radius: 5px;
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2); /* Shadow effect */
+    font-size: xx-small;
+    padding: 5px;
+    margin: 2px;
+  }
+  

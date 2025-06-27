@@ -1,0 +1,125 @@
+/* for phone version: */
+@media (max-width: 480px) {
+  .custom-card-height-login {
+    background-color: #ebfaeb95 !important;
+  }
+  .signup-btn {
+    width: 65%;
+  }
+
+  .appName {
+    font-size: 38px !important;
+  }
+
+  .login-form {
+    padding-top: 120px !important;
+    margin: auto 0;
+  }
+}
+
+/* for tablet version: */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .appName {
+    font-size: 32px !important;
+  }
+
+  .gray-input {
+    height: 28px !important;
+  }
+
+  .signup-form{
+    padding-top: 0px !important;
+  }
+  
+}
+
+/*for large screen */
+
+@media (min-width: 1025px) {
+  .login-form {
+    padding-top: 130px !important;
+    margin: auto 0;
+  }
+}
+
+
+
+* {
+  cursor: url("../../assets/images/pen_cursor.png") 0 42, auto;
+  font-family: "Montserrat", sans-serif;
+}
+
+
+.signUpPrompt {
+  margin-top: auto; 
+  padding-bottom: 20px; 
+}
+
+
+.appName {
+  margin-top: 48px;
+  font-size: 45px;
+  font-weight: 900;
+  letter-spacing: 10px;
+  border-right: 5px solid;
+  white-space: nowrap;
+  overflow: hidden;
+  display: inline-block;
+  animation:
+    typing 5s steps(11) infinite,
+    /* Total cycle: 2s typing + 3s pause */ cursor 0.7s step-end infinite
+      alternate;
+}
+
+/* Cursor blinking */
+@keyframes cursor {
+  50% {
+    border-color: transparent;
+  }
+}
+
+/* Typing effect */
+@keyframes typing {
+  0% {
+    width: 0;
+  }
+  40% {
+    width: 100%;
+  } /* Finish typing at 40% of 5s (2s) */
+  100% {
+    width: 100%;
+  } /* Stay at full width until end (3s pause) */
+}
+
+.login-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+
+.gray-input {
+  background-color: #afb5b189;
+  border-radius: 12px;
+  outline: 2px solid #386641;
+  height: 34px !important;
+  font-size: 14px;
+  padding: 5px;
+}
+
+.signup-btn {
+  background-color: #386641;
+  border-radius: 15px;
+  font-weight: bold;
+}
+
+.signup-btn:hover {
+  background-color: #12b37d;
+  color: #fdf2f2;
+  box-shadow: 0 4px 15px rgba(43, 236, 98, 0.527);
+}
+
+.error-container {
+  min-height: 24px;
+}
