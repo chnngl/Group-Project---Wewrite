@@ -29,9 +29,6 @@ app.use("/api", require("./routes/logRoutes"));
 //Use the story routes
 app.use("/api", require("./routes/storyRoutes"));
 
-const path = require("path");
-const express = require("express");
-
 app.use(express.static(path.join(__dirname, "public")));
 
 app.get("*", (req, res) => {
