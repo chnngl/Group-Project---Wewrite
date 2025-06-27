@@ -42,6 +42,7 @@ export async function apiRequest(
 
   try {
     const response = await fetch(`/api/${endpoint}`, options);
+    console.log("Calling API:", `/api/${endpoint}`);
 
     if (!response.ok) {
       const errorDetails = await response.json().catch(() => {
