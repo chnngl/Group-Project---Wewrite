@@ -2,6 +2,7 @@ const express = require("express");
 const dotenv = require("dotenv");
 const connectDB = require("./config/db");
 const cors = require("cors");
+const path = require("path");
 
 //Load environment variables
 dotenv.config();
@@ -27,6 +28,15 @@ app.use("/api", require("./routes/logRoutes"));
 
 //Use the story routes
 app.use("/api", require("./routes/storyRoutes"));
+
+const path = require("path");
+const express = require("express");
+
+app.use(express.static(path.join(__dirname, "public")));
+
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname, "public", "index.html"));
+});
 
 // Set the port from environment variable or default to 5000
 //const port = process.env.PORT || 5000;
