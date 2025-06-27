@@ -14,7 +14,7 @@ const app = express();
 //Use CORS middleware before setting up routes
 app.use(
   cors({
-    origin: "http://localhost:5173", // Allow requests from frontend on this port
+    origin: ["http://localhost:5173", "https://wewrite-ed0g.onrender.com"], // Allow requests from frontend on this port
     credentials: true, // Allow credentials (like cookies or authorization headers)
   })
 );
