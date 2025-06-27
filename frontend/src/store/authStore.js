@@ -1,7 +1,7 @@
 import { create } from "zustand";
 import axios from "axios";
 import toast from "react-hot-toast";
-const API_URL = "http://localhost:5000/api";
+const API_URL = "/api";
 
 axios.defaults.withCredentials = true;
 
@@ -13,13 +13,13 @@ const useAuthStore = create((set) => ({
   message: null,
 
   /**
- * Registers a new user with the provided email, password, and name.
- * Sends a POST request to the backend `/register` endpoint. On success,
- * logs the response and stores the returned token in `localStorage` 
- * @param {string} email - The email address of the user to register.
- * @param {string} password - The password for the new user.
- * @param {string} name - The full name of the user.
- */
+   * Registers a new user with the provided email, password, and name.
+   * Sends a POST request to the backend `/register` endpoint. On success,
+   * logs the response and stores the returned token in `localStorage`
+   * @param {string} email - The email address of the user to register.
+   * @param {string} password - The password for the new user.
+   * @param {string} name - The full name of the user.
+   */
   signup: async (email, password, name) => {
     set({ error: null });
     try {
@@ -46,11 +46,11 @@ const useAuthStore = create((set) => ({
   },
 
   /**
- * Authenticates a user using their email and password.
- *  If the login is successful,stores the received token in `localStorage`
- * @param {string} email - The user's email address.
- * @param {string} password - The user's password.
- */
+   * Authenticates a user using their email and password.
+   *  If the login is successful,stores the received token in `localStorage`
+   * @param {string} email - The user's email address.
+   * @param {string} password - The user's password.
+   */
   login: async (email, password) => {
     set({ error: null });
 
@@ -98,9 +98,9 @@ const useAuthStore = create((set) => ({
   },
 
   /**
- * Logs out the currently authenticated user.
- * On success, removes the token from `localStorage` and clears the Axios authorization header.
- */
+   * Logs out the currently authenticated user.
+   * On success, removes the token from `localStorage` and clears the Axios authorization header.
+   */
   logout: async () => {
     set({ error: null });
     try {
@@ -120,10 +120,10 @@ const useAuthStore = create((set) => ({
   },
 
   /**
- * Updates the user's password 
- * Retrieves the token from `localStorage` and includes it in the Authorization header
- * for the request. 
- */
+   * Updates the user's password
+   * Retrieves the token from `localStorage` and includes it in the Authorization header
+   * for the request.
+   */
   updatePassword: async (password) => {
     console.log("password", password);
     set({ error: null });

@@ -25,7 +25,7 @@ const ProfilePage = () => {
   const logout = async () => {
     setLoading(true);
     try {
-      await axios.post(`http://localhost:5000/api/logout`);
+      await axios.post(`api/logout`);
       // Remove token from localStorage and clear axios defaults
       localStorage.removeItem("token");
       delete axios.defaults.headers.common["Authorization"];
