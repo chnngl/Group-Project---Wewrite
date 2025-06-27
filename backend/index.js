@@ -11,11 +11,21 @@ connectDB();
 
 const app = express();
 
-//Use CORS middleware before setting up routes
+const allowedOrigins = [
+  "http://localhost:5173",
+  "https://wewrite-ed0g.onrender.com",
+];
+
 app.use(
   cors({
-    origin: ["http://localhost:5173", "https://wewrite-ed0g.onrender.com"], // Allow requests from frontend on this port
-    credentials: true, // Allow credentials (like cookies or authorization headers)
+    origin: function (origin, callback) {
+      if (!origin || allowedOrigins.includes(origin)) {
+        callback(null, true);
+      } else {
+        callback(new Error("Not allowed by CORS"));
+      }
+    },
+    credentials: true,
   })
 );
 
