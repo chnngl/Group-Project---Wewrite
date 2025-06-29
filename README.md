@@ -137,23 +137,5 @@ npm run dev            # Vite or CRA dev server
 
 ---
 
-## 🤝 Contributing
-
-1. Fork the repo  
-2. Create a feature branch: `git checkout -b feat/your-feature`  
-3. Commit changes: `git commit -m "feat: your feature"`  
-4. Push: `git push origin feat/your-feature`  
-5. Open a Pull Request
-
-Please see [CONTRIBUTING.md](CONTRIBUTING.md) for details.
-
----
-
-## 📜 License
-
-This project is licensed under the [MIT License](LICENSE).
-
----
-
 *Happy writing!*
 
