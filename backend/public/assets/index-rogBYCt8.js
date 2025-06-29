@@ -23057,7 +23057,7 @@ const BL = ({ selectedTags: t }) => {
             children: T.jsx(ar, {
               to: "/Home",
               children: T.jsx("img", {
-                src: "/src/assets/We-Write.png",
+                src: "/public/We-Write.png",
                 alt: "We Write Logo",
                 className: "h-15 object-contain",
               }),
